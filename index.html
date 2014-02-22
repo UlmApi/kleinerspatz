@@ -30,33 +30,30 @@
          var ulm = new L.LatLng(48.40, 9.98); 
          map.setView(ulm, 13);
 
-         // Get JSON for Kitas Debug
-    /*
-         $.getJSON("kitas_test.json", function(json) {
-			console.log(json); // this will show the info it in firebug console
-			var data = eval( json );
-			console.log(data);
-			for (var i=0; i<data['kitas'].length; i++) {
-				// Iterates over numeric indexes from 0 to 5, as everyone expects.
-				//alert(data['kitas'][i]['name']);
-				var marker = L.marker([data['kitas'][i]['lat'],data['kitas'][i]['long']]).addTo(map);
-				popup = "<b>" + data['kitas'][i]['name'] +  "</b>";
-				marker.bindPopup(popup);
-			}	
-			
-		});
-		*/
+
+		
 		// Get JSON for Kitas real
-         $.getJSON("coords.json", function(json) {
+         $.getJSON("kita_final.json", function(json) {
 			console.log(json); // this will show the info it in firebug console
 			var data = eval( json );
 			console.log(data);
 			for (var i=0; i<data.length; i++) {
-				// Iterates over numeric indexes from 0 to 5, as everyone expects.
-				//alert(data['kitas'][i]['name']);
+
 				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']]).addTo(map);
 				popup = "<b>" + data[i]['id'] +  "</b>";
 				popup += "<br><a target=_'blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>link</a>";
+				if (data[i]['over3'] == 'true') {
+					popup += "<br> &Uuml;ber 3 Jahre: ja";
+				} 
+				if (data[i]['over3'] == 'false') {
+					popup += "<br> &Uuml;ber 3 Jahre: nein";
+				} 
+				if (data[i]['under3'] == 'true') {
+					popup += "<br> Unter 3 Jahre: ja";
+				} 
+				if (data[i]['under3'] == 'false') {
+					popup += "<br> Unter 3 Jahre: nein";
+				} 							
 				marker.bindPopup(popup);
 			}	
 			
