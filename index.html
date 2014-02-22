@@ -1,6 +1,6 @@
 <html>
 <head>
-   <title>Leaflet Fullscreen Example</title>
+   <title>Kita Mapping Ulm</title>
    
    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		
@@ -41,7 +41,7 @@
 
 				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']]).addTo(map);
 				popup = "<b>" + data[i]['name'] +  "</b>";
-				popup += "<br><a target=_'blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>link</a>";
+				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>mehr Informationen</a>";
 				if (data[i]['over3'] == 'true') {
 					popup += "<br> &Uuml;ber 3 Jahre: ja";
 				} 

@@ -34,6 +34,8 @@
 				el1['wgs84-east'] = el['wgs84-east'];
 				el1['wgs84-north'] = el['wgs84-north'];
 				arry.push(el1);
+			} else {
+				alert("no x/y:" + el1.id)
 			}
 			
 		  })
@@ -49,7 +51,7 @@
 		
 				var kitadata = eval( json );
 				var merged = merge_json(kitadata.kitas,coords);
-				alert(JSON.stringify(merged));
+				//alert(JSON.stringify(merged));
 				 document.getElementById('map').innerHTML = JSON.stringify(merged);
 
 			});		
