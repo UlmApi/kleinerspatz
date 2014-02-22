@@ -40,7 +40,7 @@
 			for (var i=0; i<data.length; i++) {
 
 				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']]).addTo(map);
-				popup = "<b>" + data[i]['id'] +  "</b>";
+				popup = "<b>" + data[i]['name'] +  "</b>";
 				popup += "<br><a target=_'blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>link</a>";
 				if (data[i]['over3'] == 'true') {
 					popup += "<br> &Uuml;ber 3 Jahre: ja";
