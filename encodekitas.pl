@@ -12,8 +12,9 @@ my @kitas; #list of all kitas
 foreach my $kitablock (split('<td>__________________________________________________________</td>',$mech->content())) { #each kitablock contains one kite
   my %currentkita;
   foreach my $infoblock (split('tr>', $kitablock)){ #each infoblock contains some kind of info like email or telefon
-    if ($infoblock =~m/color:#0E4276;font-weight:bold;" href="einrichtung_allgemein\.php\?id=(\d+)">(.*)<\/a><\/b><\/td>/){ #line with id
+    if ($infoblock =~m/color:#0E4276;font-weight:bold;" href="einrichtung_allgemein\.php\?id=(\d+)">(.*)<\/a><\/b><\/td>/){ #line with id and name
       $currentkita{'id'}=$1;
+      $currentkita{'name'}=$2;
     }
     if ($infoblock =~m/<td>Telefon: (.*)<\/td>/){ #line with telefon
       $currentkita{'telefon'}=$1;
