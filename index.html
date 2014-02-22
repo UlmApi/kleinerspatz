@@ -31,29 +31,56 @@
          map.setView(ulm, 13);
 
 
+function iconInstance(name){
+	return L.icon({
+		iconUrl: "img/"+ name + ".png",
+		shadowUrl: null,
+		
+		iconSize: [25,43],
+		shadowSize: [0,0],
+		iconAnchor: [25,43],
+		shadowAnchor: [0,0],
+		popupAnchor:[0,-40]
+	});
+}
 		
 		// Get JSON for Kitas real
          $.getJSON("kita_final.json", function(json) {
 			console.log(json); // this will show the info it in firebug console
-			var data = eval( json );
+			data = eval( json );
 			console.log(data);
 			for (var i=0; i<data.length; i++) {
+				if(i==1){console.log(data[i]);}
+				iconname = "";
+				if(data[i]['over3'] == null){
+						iconname+="gray";
+				}else switch(data[i]['over3']){
+					case "true":
+						iconname+="green";
+						break;
+					case "false":
+						iconname+="red";
+						break;
+				}
+				if(data[i]['under3'] == null){
+						iconname+="gray";
+				}else switch(data[i]['under3']){
+					case "true":
+						iconname+="green";
+						break;
+					case "false":
+						iconname+="red";
+						break;
+					case null:
+						iconname+="gray";
+						break;
+				}
+				icon = iconInstance(iconname);
 
-				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']]).addTo(map);
+				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
 				popup = "<b>" + data[i]['name'] +  "</b>";
 				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>mehr Informationen</a>";
-				if (data[i]['over3'] == 'true') {
-					popup += "<br> &Uuml;ber 3 Jahre: ja";
-				} 
-				if (data[i]['over3'] == 'false') {
-					popup += "<br> &Uuml;ber 3 Jahre: nein";
-				} 
-				if (data[i]['under3'] == 'true') {
-					popup += "<br> Unter 3 Jahre: ja";
-				} 
-				if (data[i]['under3'] == 'false') {
-					popup += "<br> Unter 3 Jahre: nein";
-				} 							
+
 				marker.bindPopup(popup);
 			}	
 			
@@ -67,6 +94,7 @@
 <body onLoad="javascript:init();">
    <div id="map"></div>
    
+   <div id="debug"></div>
 </body>                                                                                                                          
 </html>
     
