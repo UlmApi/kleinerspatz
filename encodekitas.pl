@@ -26,6 +26,9 @@ foreach my $kitablock (split('<td>______________________________________________
         my @coords=split(/\s+/, `echo $1 $2 | cs2cs -f "%.8f" +proj=tmerc +lat_0=0 +lon_0=9 +k=1.000000 +x_0=3500000 +y_0=0 +ellps=bessel +datum=potsdam +units=m +no_defs`);
         #note that this is not a stupid security hole, since $1 and $2 contain integers, because of my regexp
         ($currentkita{'wgs84-east'}, $currentkita{'wgs84-north'}, @_)=@coords;
+        #okay, here's a small perl hack, split gives us strings, but we want doubles
+        $currentkita{'wgs84-east'} +=0;
+        $currentkita{'wgs84-north'} +=0;
       }
     }
     if ($infoblock =~m/<td>Telefon: (.*)<\/td>/){ #line with telefon
