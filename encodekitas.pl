@@ -60,5 +60,5 @@ foreach my $kitablock (split('<td>______________________________________________
 }
 
 my $json = encode_json({kitas => \@kitas}); #convert the list of all kitas to json
-open KITAFILE, "+>kitadata.json", or die "Could not open kitadata.json";
+open KITAFILE, "+>kita_final.json", or die "Could not open kitadata.json";
 print KITAFILE "$json \n";
