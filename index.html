@@ -1,7 +1,8 @@
 <html>
 <head>
    <title>Kita Mapping Ulm</title>
-   
+
+	<meta charset="utf-8">   
    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		
    <style>
@@ -11,6 +12,28 @@
       padding:0px;
       margin:0px;
    } 
+   
+	#legend{
+	background:#333333;
+	position: fixed;
+	bottom:30px;
+	right:30px;
+	z-index:100;
+	color: #EEEEEE;
+	font-family: sans;
+	border: 1px solid #333;
+	margin:4px;
+	padding:4px;
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	}   
    </style>
    
  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
@@ -21,8 +44,8 @@
       function init() {
          var map = new L.Map('map');                       
               
-      	 L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+      	 L.tileLayer('http://{s}.tile.cloudmade.com/3a83164a47874169be4cabc2e8b8c449/33481/256/{z}/{x}/{y}.png', {
+            attribution: '<a href="http://ulmapi.de">UlmApi.de</a>, Stadt Ulm, Map data &copy; 2014 OpenStreetMap contributors, Imagery &copy; 2014 CloudMade',
             maxZoom: 18
          }).addTo(map);
          map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
@@ -36,7 +59,7 @@ function iconInstance(name){
 		iconUrl: "img/"+ name + ".png",
 		shadowUrl: null,
 		
-		iconSize: [25,43],
+		iconSize: [20,29],
 		shadowSize: [0,0],
 		iconAnchor: [25,43],
 		shadowAnchor: [0,0],
@@ -77,11 +100,13 @@ function iconInstance(name){
 				}
 				icon = iconInstance(iconname);
 
-				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
-				popup = "<b>" + data[i]['name'] +  "</b>";
-				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>mehr Informationen</a>";
-
-				marker.bindPopup(popup);
+				if(data[i]['wgs84-north'] && data[i]['wgs84-east']){ //filter non-plotable data
+					var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
+					popup = "Kindertageseinrichtung<br><b>" + data[i]['name'] +  "</b><br>";
+					popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>Weitere Informationen</a>";
+					popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1="+ data[i]['id'] +"'>Kontaktformular</a>";
+					marker.bindPopup(popup);
+				}
 			}	
 			
 		});		
@@ -92,8 +117,22 @@ function iconInstance(name){
    
 </head>
 <body onLoad="javascript:init();">
-   <div id="map"></div>
+   <div id="legend">
+   <ul style="list-style: none;padding:0; margin:0;">
+   	<li><img src="img/graygray.png" height="20"> unbekannt</li>   	
+
+   	<li><img src="img/greengray.png" height="20"> freie Plätze unter 3 Jahre</li>   	
+   	<li><img src="img/redgray.png" height="20"> keine Plätze unter 3 Jahre</li>   	
+
+   	<li><img src="img/graygreen.png" height="20"> freie Plätze über 3 Jahre</li>   	
+   	<li><img src="img/grayred.png" height="20"> keine Plätze über 3 Jahre</li>  	
+
+   </ul>
+   		
+   </div>
    
+   <div id="map"></div>
+
    <div id="debug"></div>
 </body>                                                                                                                          
 </html>

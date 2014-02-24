@@ -15,6 +15,21 @@ foreach my $kitablock (split('<td>______________________________________________
     if ($infoblock =~m/color:#0E4276;font-weight:bold;" href="einrichtung_allgemein\.php\?id=(\d+)">(.*)<\/a><\/b><\/td>/){ #line with id and name
       $currentkita{'id'}=$1;
       $currentkita{'name'}=$2;
+      #we also want the coordinates of the kita
+      #so we go on the following page
+      $mech->get( "http://suche.kita.ulm.de/homepage/einrichtung_allgemein.php?id=$currentkita{'id'}" ) or die "Could not access http://suche.kita.ulm.de/homepage/einrichtung_allgemein.php?id$currentkita{'id'}";
+      #and then the first link is something like http://www.stadtplan.ulm.de/stadtplan/cgi-bin/cityguide.pl?action=show&lang=de&size=1076&mapper=2&zoom=100&mapX=3573150&mapY=5363969
+      #looky-look what have we here: mapX=3573150 mapY=5363969
+      if ($mech->content() =~m/mapX=(\d+)&mapY=(\d+)/){
+        #now $1 is easting and $2 is northing
+        #convert from gauss krueger zone 3 coordinates into WGS84 Coordinate Reference System
+        my @coords=split(/\s+/, `echo $1 $2 | cs2cs -f "%.8f" +proj=tmerc +lat_0=0 +lon_0=9 +k=1.000000 +x_0=3500000 +y_0=0 +ellps=bessel +datum=potsdam +units=m +no_defs`);
+        #note that this is not a stupid security hole, since $1 and $2 contain integers, because of my regexp
+        ($currentkita{'wgs84-east'}, $currentkita{'wgs84-north'}, @_)=@coords;
+        #okay, here's a small perl hack, split gives us strings, but we want doubles
+        $currentkita{'wgs84-east'} +=0;
+        $currentkita{'wgs84-north'} +=0;
+      }
     }
     if ($infoblock =~m/<td>Telefon: (.*)<\/td>/){ #line with telefon
       $currentkita{'telefon'}=$1;
@@ -47,5 +62,6 @@ foreach my $kitablock (split('<td>______________________________________________
   #i.e., if a kita was found in the current kitablock
 }
 
-my $json = encode_json({kitas => \@kitas}); #convert the list of all kitas to json
-print "$json \n";
+my $json = encode_json(\@kitas); #convert the list of all kitas to json
+open KITAFILE, "+>kita_final.json", or die "Could not open kitadata.json";
+print KITAFILE "$json \n";
