@@ -4,6 +4,14 @@ use warnings;
 use JSON;
 use WWW::Mechanize;
 
+use URI;
+use Web::Scraper;
+
+my $kitainstancescraper = scraper {
+	process "a.list-link08", mapurl => '@href';
+};
+	#process "tr:contains('Stand')"
+
 my $url="http://suche.kita.ulm.de/homepage/liste.php?Traeger=null&Stadtteil=null&Strasse=null&PLZ=null&Altersstufe=null&Angebotsform=null&Paedagogisches_Konzept=null&Integrationsangebot=null&Freie_Plaetze=Nein&Submit=Suchen"; # urls must be absolute
 my $mech = WWW::Mechanize->new();
 $mech->get( $url ) or die "Could not access website";
@@ -15,12 +23,10 @@ foreach my $kitablock (split('<td>______________________________________________
     if ($infoblock =~m/color:#0E4276;font-weight:bold;" href="einrichtung_allgemein\.php\?id=(\d+)">(.*)<\/a><\/b><\/td>/){ #line with id and name
       $currentkita{'id'}=$1;
       $currentkita{'name'}=$2;
-      #we also want the coordinates of the kita
-      #so we go on the following page
-      $mech->get( "http://suche.kita.ulm.de/homepage/einrichtung_allgemein.php?id=$currentkita{'id'}" ) or die "Could not access http://suche.kita.ulm.de/homepage/einrichtung_allgemein.php?id$currentkita{'id'}";
-      #and then the first link is something like http://www.stadtplan.ulm.de/stadtplan/cgi-bin/cityguide.pl?action=show&lang=de&size=1076&mapper=2&zoom=100&mapX=3573150&mapY=5363969
-      #looky-look what have we here: mapX=3573150 mapY=5363969
-      if ($mech->content() =~m/mapX=(\d+)&mapY=(\d+)/){
+      #download kita metadata from the following URI:
+      my $res = $kitainstancescraper->scrape(URI->new("http://suche.kita.ulm.de/homepage/einrichtung.php?id=$currentkita{'id'}"));
+      #match the coordinates from the map URL, if the coordinates are present there
+      if ($res->{mapurl} =~m/mapX=(\d+)&mapY=(\d+)/){
         #now $1 is easting and $2 is northing
         #convert from gauss krueger zone 3 coordinates into WGS84 Coordinate Reference System
         my @coords=split(/\s+/, `echo $1 $2 | cs2cs -f "%.8f" +proj=tmerc +lat_0=0 +lon_0=9 +k=1.000000 +x_0=3500000 +y_0=0 +ellps=bessel +datum=potsdam +units=m +no_defs`);
@@ -29,6 +35,8 @@ foreach my $kitablock (split('<td>______________________________________________
         #okay, here's a small perl hack, split gives us strings, but we want doubles
         $currentkita{'wgs84-east'} +=0;
         $currentkita{'wgs84-north'} +=0;
+      } else {
+        #mapurl does not contain coordinates. Could parse groupID and objectID here, or the address
       }
     }
     if ($infoblock =~m/<td>Telefon: (.*)<\/td>/){ #line with telefon
