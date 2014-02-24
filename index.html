@@ -1,7 +1,8 @@
 <html>
 <head>
    <title>Kita Mapping Ulm</title>
-   
+
+	<meta charset="utf-8">   
    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 		
    <style>
@@ -11,6 +12,28 @@
       padding:0px;
       margin:0px;
    } 
+   
+	#legend{
+	background:#333333;
+	position: fixed;
+	bottom:30px;
+	right:30px;
+	z-index:100;
+	color: #EEEEEE;
+	font-family: sans;
+	border: 1px solid #333;
+	margin:4px;
+	padding:4px;
+	filter: alpha(opacity=50);
+	-moz-opacity:0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+
+	border-radius: 4px;
+	-o-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	}   
    </style>
    
  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
@@ -36,7 +59,7 @@ function iconInstance(name){
 		iconUrl: "img/"+ name + ".png",
 		shadowUrl: null,
 		
-		iconSize: [25,43],
+		iconSize: [20,29],
 		shadowSize: [0,0],
 		iconAnchor: [25,43],
 		shadowAnchor: [0,0],
@@ -92,8 +115,22 @@ function iconInstance(name){
    
 </head>
 <body onLoad="javascript:init();">
-   <div id="map"></div>
+   <div id="legend">
+   <ul style="list-style: none;padding:0; margin:0;">
+   	<li><img src="img/graygray.png" height="20"> unbekannt</li>   	
+
+   	<li><img src="img/greengray.png" height="20"> freie Plätze unter 3 Jahre</li>   	
+   	<li><img src="img/redgray.png" height="20"> keine Plätze unter 3 Jahre</li>   	
+
+   	<li><img src="img/graygreen.png" height="20"> freie Plätze über 3 Jahre</li>   	
+   	<li><img src="img/grayred.png" height="20"> keine Plätze über 3 Jahre</li>  	
+
+   </ul>
+   		
+   </div>
    
+   <div id="map"></div>
+
    <div id="debug"></div>
 </body>                                                                                                                          
 </html>
