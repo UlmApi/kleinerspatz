@@ -45,7 +45,7 @@
          var map = new L.Map('map');                       
               
       	 L.tileLayer('http://{s}.tile.cloudmade.com/3a83164a47874169be4cabc2e8b8c449/33481/256/{z}/{x}/{y}.png', {
-            attribution: '© <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+            attribution: '<a href="http://ulmapi.de">UlmApi.de</a>, Stadt Ulm, Map data &copy; 2014 OpenStreetMap contributors, Imagery &copy; 2014 CloudMade',
             maxZoom: 18
          }).addTo(map);
          map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
@@ -101,9 +101,9 @@ function iconInstance(name){
 				icon = iconInstance(iconname);
 
 				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
-				popup = "<b>" + data[i]['name'] +  "</b>";
-				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>mehr Informationen</a>";
-
+				popup = "Kindertageseinrichtung<br><b>" + data[i]['name'] +  "</b><br>";
+				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>Weitere Informationen</a>";
+				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1="+ data[i]['id'] +"'>Kontaktformular</a>";
 				marker.bindPopup(popup);
 			}	
 			
