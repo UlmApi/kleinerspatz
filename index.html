@@ -100,11 +100,13 @@ function iconInstance(name){
 				}
 				icon = iconInstance(iconname);
 
-				var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
-				popup = "Kindertageseinrichtung<br><b>" + data[i]['name'] +  "</b><br>";
-				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>Weitere Informationen</a>";
-				popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1="+ data[i]['id'] +"'>Kontaktformular</a>";
-				marker.bindPopup(popup);
+				if(data[i]['wgs84-north'] && data[i]['wgs84-east']){ //filter non-plotable data
+					var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
+					popup = "Kindertageseinrichtung<br><b>" + data[i]['name'] +  "</b><br>";
+					popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>Weitere Informationen</a>";
+					popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1="+ data[i]['id'] +"'>Kontaktformular</a>";
+					marker.bindPopup(popup);
+				}
 			}	
 			
 		});		
