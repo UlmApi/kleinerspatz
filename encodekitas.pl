@@ -23,7 +23,7 @@ foreach my $kitablock (split('<td>______________________________________________
       if ($mech->content() =~m/mapX=(\d+)&mapY=(\d+)/){
         #now $1 is easting and $2 is northing
         #convert from gauss krueger zone 3 coordinates into WGS84 Coordinate Reference System
-        my @coords=split(/\s+/, `echo $1 $2 | cs2cs -f "%.8f" +proj=tmerc +lat_0=0 +lon_0=9 +k=1.000000 +x_0=3500000 +y_0=0 +ellps=bessel +datum=potsdam +units=m +no_defs`);
+        my @coords=split(/\s+/, `echo $1 $2 | cs2cs -f "%.8f" +init=epsg:31467 +to +init=epsg:4326`);
         #note that this is not a stupid security hole, since $1 and $2 contain integers, because of my regexp
         ($currentkita{'wgs84-east'}, $currentkita{'wgs84-north'}, @_)=@coords;
         #okay, here's a small perl hack, split gives us strings, but we want doubles
