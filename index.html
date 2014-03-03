@@ -13,6 +13,10 @@
       margin:0px;
    } 
 
+	#title a:link{
+	color: #FEFEFE;
+	font-family: sans;
+	}
 	#title{
 	background:#333333;
 	position: fixed;
@@ -80,6 +84,8 @@
  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
  <script src="http://code.jquery.com/jquery-2.1.0.js" type="text/javascript"></script>
    <script language="javascript">
+
+
       function init() {
          var map = new L.Map('map');                       
               
@@ -88,6 +94,8 @@
             maxZoom: 18
          }).addTo(map);
          map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
+
+         //buildCtrls().addTo(map);
 
          var ulm = new L.LatLng(48.40, 9.98); 
          map.setView(ulm, 13);
@@ -159,6 +167,7 @@ function iconInstance(name){
 
    <div id="title">
 	<h4>kleiner spatz</h4>
+		<a "onclick='$.fancybox(this);return false;'" href='#dialog' class='legend'>&Uuml;ber dieses Projekt</a>
    </div>
 
    <div id="legend">
