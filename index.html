@@ -11,15 +11,28 @@
 			box-shadow: 0 0 50px #222;
 		}
 
-   html, body, #map {
+   html, body, #map, h4, ul {
       height:100%;
       width:100%;
       padding:0px;
       margin:0px;
    } 
+   
+   h4{
+   	margin: 6px 0px;
+   }
+   
+   a {
+   color: #FEFEFE;
+   text-decoration:none;
+   font-style:italic;   
+   }
 
-	#title a{
-	color: #FEFEFE;
+	
+	#dialog a{
+   font-style:normal;   
+   font-weight: 600;
+	color: #333333;
 	font-family: sans;
 	} 
 
@@ -60,18 +73,18 @@
 	z-index:100;
 	color: #EEEEEE;
 	font-family: sans;
-	border: 1px solid #333;
-	margin:4px;
-	padding:4px;
+	border: 1px solid #EEEEEE;
+	margin:6px;
+	padding:6px;
 	filter: alpha(opacity=80);
 	-moz-opacity:0.8;
 	-khtml-opacity: 0.8;
 	opacity: 0.8;
 
-	border-radius: 4px;
-	-o-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
+	border-radius: 6px;
+	-o-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
 	}   
 
 	.logos {
@@ -190,21 +203,19 @@ function iconInstance(name){
 </head>
 <body onLoad="javascript:init();">
 
-   <div id="title">
-	<h4>kleiner spatz</h4>
-		<a href='#dialog' class='fancybox'>&Uuml;ber dieses Projekt</a>
-
-   </div>
 
    <div id="dialog">
    <h4>&Uuml;ber dieses Projekt</h4>
-Auf diese Karte werden die verfügbaren KITA-Pl&auml;tze in der Stadt Ulm angezeigt. Die Daten kommen von der <a href="http://www.ulm.de/ulm/stadt_ulm_01.c.72078.de/">Übersichtsseite der Stadt Ulm</a> und wurden zuletzt am 2014-03-02 00:17:01 von dort geholt.
+<p>Auf diese Karte werden die verfügbaren KITA-Pl&auml;tze in der Stadt Ulm angezeigt. Die Daten kommen von der <a href="http://www.ulm.de/ulm/stadt_ulm_01.c.72078.de/">Übersichtsseite der Stadt Ulm</a> und wurden zuletzt am 2014-03-02 00:17:01 von dort geholt.</p>
 
-Dieses Projekt ist von der <a href="http://www.ulmapi.de">datalove-Gruppe / UlmAPI</a> im Rahmen des <a href="http://opendataday.org/">OpenDataDay 2014</a> entwickelt worden. Der Quelltext der Seite, sowie die Daten und Skripte, um die Daten zu aktualisieren, befinden sich auf <a href="https://github.com/UlmApi/kleinerspatz">github</a>.
+<p>Dieses Projekt ist von der <a href="http://www.ulmapi.de">datalove-Gruppe / UlmAPI</a> im Rahmen des <a href="http://opendataday.org/">OpenDataDay 2014</a> entwickelt worden. Der Quelltext der Seite, sowie die Daten und Skripte, um die Daten zu aktualisieren, befinden sich auf <a href="https://github.com/UlmApi/kleinerspatz">github</a>.</p>
    </div>
 
 
    <div id="legend">
+	<h4>Kleiner Spatz</h4>
+		<a href='#dialog' class='fancybox'>Mehr Informationen…</a>
+   <h4>Legende</h4>
    <ul style="list-style: none;padding:0; margin:0;">
    	<li><img src="img/nurs_graygray.png" height="20"> unbekannt</li>   	
 
