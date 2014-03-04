@@ -66,7 +66,7 @@
 
    
 	#legend{
-	background:#333333;
+	background:#777777;
 	position: fixed;
 	bottom:30px;
 	right:30px;
@@ -118,9 +118,9 @@
 
    <script language="javascript">
 
-
+	var map;
       function init() {
-         var map = new L.Map('map');                       
+         map = new L.Map('map');                       
               
       	 L.tileLayer('http://{s}.tile.cloudmade.com/3a83164a47874169be4cabc2e8b8c449/33481/256/{z}/{x}/{y}.png', {
             attribution: '<a href="http://ulmapi.de">UlmApi.de</a>, Stadt Ulm, Map data &copy; 2014 OpenStreetMap contributors, Imagery &copy; 2014 CloudMade',
@@ -134,9 +134,13 @@
          map.setView(ulm, 13);
 
 
-function iconInstance(name){
+function iconInstance(id){
+	var name = "";
+	if(id==0){ name = "box";}
+	else if(id==1){ name = "box-checked";}
+	else if(id==2){ name = "box-crossed";}
 	return L.icon({
-		iconUrl: "img/nurs_"+ name + ".png",
+		iconUrl: "img/"+ name + ".svg",
 		shadowUrl: null,
 		
 		iconSize: [25,25],
@@ -146,52 +150,75 @@ function iconInstance(name){
 		popupAnchor:[0,-26]
 	});
 }
-		
-		// Get JSON for Kitas real
+
+	//arrays for layering; one for >3, one for <3
+	var over3  = [],
+	    under3 = [];
+	
+	// Get JSON for Kitas real
          $.getJSON("kita_final.json", function(json) {
 			console.log(json); // this will show the info it in firebug console
 			data = eval( json );
 			console.log(data);
 			for (var i=0; i<data.length; i++) {
 				if(i==1){console.log(data[i]);}
-				iconname = "";
+				current_over3  = -1;
+				current_under3 = -1;
 				if(data[i]['over3'] == null){
-						iconname+="gray";
-				}else switch(data[i]['over3']){
-					case "true":
-						iconname+="green";
-						break;
-					case "false":
-						iconname+="red";
-						break;
+						current_over3 = 0;
+				}else if(data[i]['over3'] == "true"){
+						current_over3 = 1;
+				}else if(data[i]['over3'] == "false"){
+						current_over3 = 2;
+				}else {
+						console.warn("Warning, bad data: " + data[i]);
 				}
 				if(data[i]['under3'] == null){
-						iconname+="gray";
-				}else switch(data[i]['under3']){
-					case "true":
-						iconname+="green";
-						break;
-					case "false":
-						iconname+="red";
-						break;
-					case null:
-						iconname+="gray";
-						break;
+						current_under3 = 0;
+				}else if(data[i]['under3'] == "true"){
+						current_under3 = 1;
+				}else if(data[i]['under3'] == "false"){
+						current_under3 = 2;
+				}else {
+						console.warn("Warning, bad data: " + data[i]);
 				}
-				icon = iconInstance(iconname);
+				icon_over3  = iconInstance(current_over3);
+				icon_under3 = iconInstance(current_under3);
 
 				if(data[i]['wgs84-north'] && data[i]['wgs84-east']){ //filter non-plotable data
-					var marker = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon}).addTo(map);
+					var marker_over3  = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon_over3 });
+					var marker_under3 = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon_under3});
+
 					popup = "Kindertageseinrichtung<br><b>" + data[i]['name'] +  "</b><br>";
 					popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>Weitere Informationen</a>";
 					popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1="+ data[i]['id'] +"'>Kontaktformular</a>";
-					marker.bindPopup(popup);
+					marker_over3.bindPopup(popup);
+					marker_under3.bindPopup(popup);
+					over3.push(marker_over3);
+					under3.push(marker_under3);
 				}
 			}
 			
+			//the only way to make them global seems to be to NOT declare them!
+			over3Layer = L.layerGroup(over3);
+			under3Layer = L.layerGroup(under3);
+			over3Layer.addTo(map);
 		});
-
       }
+
+
+	function putOver3(){
+		this.over3Layer.addTo(map);
+		map.removeLayer(under3Layer);
+		document.getElementsByClassName('over3')[0].style.fontWeight='bold';
+		document.getElementsByClassName('under3')[0].style.fontWeight='normal';
+	}
+	function putUnder3(){
+		this.under3Layer.addTo(map);
+		map.removeLayer(over3Layer);
+		document.getElementsByClassName('under3')[0].style.fontWeight='bold';
+		document.getElementsByClassName('over3')[0].style.fontWeight='normal';
+	}
    </script>
 
 <script type="text/javascript">
@@ -214,16 +241,20 @@ function iconInstance(name){
 
    <div id="legend">
 	<h4>Kleiner Spatz</h4>
+	Anzeigen für Kinder im Älter:
+	<ul>
+	<li> <a style='font-weight:bold' class='over3' href='javascript:putOver3();'>über 3</a></li>
+	<li> <a style='font-weight:normal' class='under3' href='javascript:putUnder3();'>unter 3</a></li>
+	</ul>
+	<br>
+	
 		<a href='#dialog' class='fancybox'>Mehr Informationen…</a>
    <h4>Legende</h4>
    <ul style="list-style: none;padding:0; margin:0;">
-   	<li><img src="img/nurs_graygray.png" height="20"> unbekannt</li>   	
+   	<li><img src="img/box.svg" height="20"> unbekannt</li>   	
 
-   	<li><img src="img/nurs_greengray.png" height="20"> freie Plätze unter 3 Jahre</li>   	
-   	<li><img src="img/nurs_redgray.png" height="20"> keine Plätze unter 3 Jahre</li>   	
-
-   	<li><img src="img/nurs_graygreen.png" height="20"> freie Plätze über 3 Jahre</li>   	
-   	<li><img src="img/nurs_grayred.png" height="20"> keine Plätze über 3 Jahre</li>  	
+   	<li><img src="img/box-checked.svg" height="20"> freie Plätze</li>   	
+   	<li><img src="img/box-crossed.svg" height="20"> keine Plätze</li>   	
 
    </ul>
    		
