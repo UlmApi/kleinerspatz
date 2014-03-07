@@ -7,14 +7,44 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   id="svg2985"
    version="1.1"
-   width="30.875"
-   height="28.9375"
-   id="svg3006">
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="box-checked.svg"
+   inkscape:export-filename="/home/namnatulco/opendata/kleinerspatz/img/box-crossed.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
-     id="defs3008" />
+     id="defs2987" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="1"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="0"
+     inkscape:zoom="11.2"
+     inkscape:cx="39.708277"
+     inkscape:cy="26.943493"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="1366"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="2"
+     fit-margin-left="2"
+     fit-margin-right="2"
+     fit-margin-bottom="2"
+     showborder="true" />
   <metadata
-     id="metadata3011">
+     id="metadata2990">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -26,22 +56,46 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-335.19502,-517.88392)"
-     id="layer1">
-    <g
-       transform="translate(414.85127,142.32142)"
-       id="layer1-0">
-      <rect
-         width="23.928564"
-         height="23.928564"
-         x="-77.14286"
-         y="378.07648"
-         id="rect2993"
-         style="fill:none;stroke:#000000;stroke-opacity:1" />
-      <path
-         d="m -72.857639,390.93063 c 0.332665,0.61997 0.685797,1.07206 0.99784,1.63335 0.145884,0.47066 0.364551,0.76593 0.662663,1.10336 0.675633,1.00788 1.442785,1.9387 2.271296,2.79895 0.588342,0.68501 1.242584,1.29501 1.969666,1.79629 0.197021,0.12584 0.379429,0.11332 0.592639,0.0889 -1.021901,0.19494 -2.043803,0.38988 -3.065705,0.58483 0.08459,-0.0448 0.07317,-0.0282 0.138484,-0.1065 0.398161,-0.47721 0.841408,-0.89747 1.275867,-1.33699 1.838086,-1.83435 3.42218,-3.93978 5.023569,-6.01378 1.050996,-1.36118 2.097321,-2.72664 3.147288,-4.08877 1.484728,-1.90919 3.135583,-3.64982 4.810281,-5.35655 l 1.702214,-0.0222 -1.199556,1.62571 c -1.481664,1.71752 -1.21905,1.55459 -2.784365,3.51253 -1.503569,1.93304 -1.654822,2.10405 -3.120038,4.08226 -1.500663,2.02608 -2.940472,4.11492 -4.59096,6.00205 -0.186399,0.22697 -0.370029,0.4567 -0.559195,0.68092 -0.158851,0.18829 -0.358382,0.33669 -0.498083,0.54229 -0.01351,0.0199 -0.197079,0.0937 -0.24682,0.10614 -1.071842,0.26776 -2.030591,0.64181 -3.10902,0.87591 -0.232178,-0.0285 -0.428008,-0.15258 -0.612944,-0.30549 -0.657535,-0.57946 -1.270197,-1.21301 -1.857197,-1.87659 -0.844867,-0.87761 -1.644932,-1.81293 -2.295896,-2.8738 -0.222865,-0.37545 -0.458933,-0.74154 -0.678016,-1.11965 -0.311982,-0.53842 -0.775518,-1.29856 -0.969037,-2.09485 l 2.995025,-0.23829 z"
-         id="path3796"
-         style="fill:#00aa00;fill-opacity:1;stroke:#00aa00;stroke-width:2.54372835;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(80.15625,-381)"
+     style="display:inline">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:1.69696963;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2993"
+       width="20.30303"
+       height="20.30303"
+       x="-78.307762"
+       y="382.84848" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="checked"
+     style="display:inline">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 4.4491734,13.647441 c 0.2916799,0.557927 0.6013064,0.964752 0.8749078,1.46969 0.1279133,0.423362 0.319637,0.689088 0.5810228,0.992962 0.592396,0.906742 1.2650351,1.744383 1.9914755,2.518436 0.5158589,0.616327 1.0895007,1.165002 1.7270074,1.61638 0.1727457,0.112579 0.3326832,0.103001 0.5196261,0.08075 -0.8960046,0.175559 -1.79201,0.350911 -2.6880141,0.526289 0.074044,-0.03831 0.064066,-0.02601 0.1214432,-0.09666 0.3491083,-0.42938 0.7377463,-0.807776 1.1186808,-1.203137 1.6116351,-1.65032 3.0005741,-3.544978 4.4046711,-5.411284 0.921514,-1.224706 1.838935,-2.453231 2.759544,-3.678767 1.301816,-1.7182698 2.74929,-3.284092 4.217669,-4.8200099 l 1.4925,-0.018892 -1.051769,1.4627672 c -1.299128,1.5454415 -1.068868,1.3988556 -2.441337,3.1606167 -1.318332,1.73935 -1.450953,1.893196 -2.735655,3.673203 -1.315782,1.823098 -2.57821,3.702602 -4.02536,5.400647 -0.163438,0.204079 -0.324441,0.410915 -0.490304,0.612716 -0.13928,0.169309 -0.314229,0.302942 -0.436718,0.487831 -0.01178,0.01604 -0.1728,0.08243 -0.216413,0.09628 C 9.2323584,20.758129 8.3917251,21.094727 7.4461589,21.30538 7.2425845,21.278983 7.0708752,21.168059 6.9087275,21.030493 6.3322,20.509082 5.795017,19.939069 5.2803344,19.341933 4.5395537,18.552274 3.8380568,17.710621 3.267289,16.756078 3.0718811,16.418249 2.864897,16.088883 2.6728019,15.748687 2.3992575,15.264209 1.9928283,14.580153 1.8231506,13.863657 L 4.449194,13.649278 z"
+       id="path3796"
+       style="fill:#00aa00;fill-opacity:1;stroke:#00aa00;stroke-width:2.25940418;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="crossed"
+     style="display:none">
+    <text
+       xml:space="preserve"
+       style="font-size:36.09009552px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1.2502668"
+       y="21.883389"
+       id="text3135"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3137"
+         x="1.2502668"
+         y="21.883389"
+         style="font-size:36.09009552px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#800000;font-family:Comic Sans MS;-inkscape-font-specification:Comic Sans MS Bold">x</tspan></text>
   </g>
 </svg>
