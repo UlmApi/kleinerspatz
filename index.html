@@ -16,6 +16,7 @@
       width:100%;
       padding:0px;
       margin:0px;
+      font-size:8pt;
    } 
    
    h4{
@@ -219,6 +220,8 @@ function iconInstance(id){
 		document.getElementsByClassName('under3')[0].style.fontWeight='bold';
 		document.getElementsByClassName('over3')[0].style.fontWeight='normal';
 	}
+	
+	
    </script>
 
 <script type="text/javascript">
@@ -236,19 +239,23 @@ function iconInstance(id){
 <p>Auf diese Karte werden die verfügbaren KITA-Pl&auml;tze in der Stadt Ulm angezeigt. Die Daten kommen von der <a href="http://www.ulm.de/ulm/stadt_ulm_01.c.72078.de/">Übersichtsseite der Stadt Ulm</a> und wurden zuletzt am 2014-03-02 00:17:01 von dort geholt.</p>
 
 <p>Dieses Projekt ist von der <a href="http://www.ulmapi.de">datalove-Gruppe / UlmAPI</a> im Rahmen des <a href="http://opendataday.org/">OpenDataDay 2014</a> entwickelt worden. Der Quelltext der Seite, sowie die Daten und Skripte, um die Daten zu aktualisieren, befinden sich auf <a href="https://github.com/UlmApi/kleinerspatz">github</a>.</p>
+
+<h4>Kontakt</h4>
+<p>WWW: <a href="http://www.ulmapi.de">ulmapi.de</a><br/>
+Mail: datalove (at) uni-ulm.de <br/>
+Twitter: <a href="http://twitter.com/ulmapi">@ulmapi</a><br/>
+</p>
    </div>
 
 
    <div id="legend">
 	<h4>Kleiner Spatz</h4>
-	Anzeigen für Kinder im Älter:
-	<ul>
-	<li> <a style='font-weight:bold' class='over3' href='javascript:putOver3();'>über 3</a></li>
-	<li> <a style='font-weight:normal' class='under3' href='javascript:putUnder3();'>unter 3</a></li>
-	</ul>
-	<br>
+	<p>
+	 <input onclick="putOver3();" type="radio" name="age" value="ueber3" checked> Plätze für Kinder über 3 Jahre <br/>
+	 <input onclick="putUnder3();" type="radio" name="age" value="unter3"> Plätze für Kinder unter 3 Jahre </p>
 	
-		<a href='#dialog' class='fancybox'>Mehr Informationen…</a>
+
+		<a href='#dialog' class='fancybox'>Mehr Informationen über diese Karte…</a>
    <h4>Legende</h4>
    <ul style="list-style: none;padding:0; margin:0;">
    	<li><img src="img/box.svg" height="20"> unbekannt</li>   	
