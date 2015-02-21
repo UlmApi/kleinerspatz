@@ -9,7 +9,7 @@
 {"mail":"am-schulhaus3@ulm.de","telefon":"0731-88016360","name":"Am Schulhaus 3 ","wgs84-north":48.44645464,"id":"101","wgs84-east":9.98691712,"under3":"false","over3":"false"},
 {"wgs84-east":9.96697201,"over3":"false","under3":"false","mail":"h.kletting@kita.ulm.de","telefon":"0731-37841470","name":"Biberacher Stra&szlig;e 136 - Wiblinger Kinderladen","wgs84-north":48.35139617,"id":"103"},
 {"wgs84-east":10.02365607,"under3":"true","over3":"true","mail":"stchristophorus@kita.ulm.de","name":"Brandenburgweg 69","telefon":"263508","id":"26","wgs84-north":48.43090823},
-{"id":"27","wgs84-north":48.38684565,"over3":"true","mail":"StJohannes@kita.ulm.de","wgs84-east":10.07451022,"name":"Brombeerweg 4","telefon":"551577"},
+{"id":"27","wgs84-north":48.405928,"over3":"true","mail":"StJohannes@kita.ulm.de","wgs84-east":9.951167,"name":"Brombeerweg 4","telefon":"551577"},
 {"over3":"true","under3":"true","wgs84-east":9.97988785,"id":"51","wgs84-north":48.35791476,"name":"Burgauer Weg 50","telefon":"481301","mail":"Burgauerweg@ulm.de"},
 {"wgs84-east":9.96172443,"name":"Carl-Schurz-Str. 5/1","telefon":"552611","mail":"knopfschachtel@kita.ulm.de","over3":"false","id":"92","wgs84-north":48.41446398},
 {"mail":"eselsberg@montessori-ulm.de","name":"Cartesiusstra&szlig;e 6","telefon":"176380","id":"88","wgs84-north":48.41468535,"wgs84-east":9.93819578,"over3":"true","under3":"true"},
