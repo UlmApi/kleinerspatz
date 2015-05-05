@@ -1,97 +1,119 @@
+/*
+   Global map variable.
+ */
 var map;
-function init() {
-  map = new L.Map('map');                       
-       
-  L.tileLayer('http://tiles.codefor.de/static/bbs/germany/{z}/{x}/{y}.png', {
-     attribution: '<a target="_blank" href="http://ulmapi.de">UlmApi.de</a>, Stadt Ulm, Map data &copy; 2014 <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors, Tiles: <a href="http://codefor.de">CfG-Map Server</a>.',
-     maxZoom: 18
-  }).addTo(map);
-  //map.attributionControl.setPrefix(''); // Don't show the 'Powered by Leaflet' text.
-  
-  //buildCtrls().addTo(map);
-  
-  var ulm = new L.LatLng(48.40, 9.98); 
-  map.setView(ulm, 13);
+var over3Layer=L.geoJson();//.addTo(map);
+var under3Layer=L.geoJson();
 
+/*
+   This function translates an icon type into an actual LeafletJS icon.
+   For invalid arguments, this returns an icon with the URL "img/.png"
 
-  function iconInstance(id){
-    var name = "";
-    if(id==0){ name = "box";}
-    else if(id==1){ name = "box-checked";}
-    else if(id==2){ name = "box-crossed";}
-    return L.icon({
-      iconUrl: "img/"+ name + ".png",
-      shadowUrl: null,
-      iconSize: [16,16],
-      shadowSize: [0,0],
-      iconAnchor: [8,16],
-      shadowAnchor: [0,0],
-      popupAnchor:[0,-16]
-    });
-  }
-
-  //arrays for layering; one for >3, one for <3
-  var over3  = [],
-      under3 = [];
-  
-  // Get JSON for Kitas real
-  $.getJSON("kita_final.json", function(json) {
-    console.log(json); // this will show the info it in firebug console
-    data = eval( json );
-    console.log(data);
-    for (var i=0; i<data.length; i++) {
-      if(i==1){console.log(data[i]);}
-      current_over3  = -1;
-      current_under3 = -1;
-      if(data[i]['over3'] == null){
-        current_over3 = 0;
-      }else if(data[i]['over3'] == "true"){
-        current_over3 = 1;
-      }else if(data[i]['over3'] == "false"){
-        current_over3 = 2;
-      }else {
-        console.warn("Warning, bad data: " + data[i]);
-      }
-      if(data[i]['under3'] == null){
-        current_under3 = 0;
-      }else if(data[i]['under3'] == "true"){
-        current_under3 = 1;
-      }else if(data[i]['under3'] == "false"){
-        current_under3 = 2;
-      }else {
-        console.warn("Warning, bad data: " + data[i]);
-      }
-      icon_over3  = iconInstance(current_over3);
-      icon_under3 = iconInstance(current_under3);
-
-      if(data[i]['wgs84-north'] && data[i]['wgs84-east']){ //filter non-plotable data
-        var marker_over3  = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon_over3 });
-        var marker_under3 = L.marker([data[i]['wgs84-north'],data[i]['wgs84-east']], {'icon':icon_under3});
-        popup = "Kindertageseinrichtung<br><b>" + data[i]['name'] +  "</b><br>";
-        popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id="+ data[i]['id'] +"'>Weitere Informationen</a>";
-        popup += "<br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1="+ data[i]['id'] +"'>Kontaktformular</a>";
-        marker_over3.bindPopup(popup);
-        marker_under3.bindPopup(popup);
-        over3.push(marker_over3);
-        under3.push(marker_under3);
-      }
-    }
-    //the only way to make them global seems to be to NOT declare them!
-    over3Layer = L.layerGroup(over3);
-    under3Layer = L.layerGroup(under3);
-    over3Layer.addTo(map);
-  });
+   @param kitaStatus the status of a KITA. Valid values are 0, 1, and 2.
+   @returns          a LeafletJS icon that represents the given status.
+   @see L.icon
+ */
+function iconInstance(kitaStatus){
+        var name = "";
+        if(kitaStatus==0){ name = "box";}
+        else if(kitaStatus==1){ name = "box-checked";}
+        else if(kitaStatus==2){ name = "box-crossed";}
+        return L.icon({
+                iconUrl: "img/"+ name + ".png",
+                shadowUrl: null,
+                iconSize: [16,16],
+                shadowSize: [0,0],
+                iconAnchor: [8,16],
+                shadowAnchor: [0,0],
+                popupAnchor:[0,-16]
+        });
 }
 
+/*
+   Function that disables the Under3 layer and enables the Over3 layer.
+   This also changes the text in the legend, but not the radial box (as this should only be called from there). 
+ */
 function putOver3(){
-  this.over3Layer.addTo(map);
-  map.removeLayer(under3Layer);
-  document.getElementsByClassName('over3')[0].style.fontWeight='bold';
-  document.getElementsByClassName('under3')[0].style.fontWeight='normal';
+        this.over3Layer.addTo(map);
+        map.removeLayer(under3Layer);
+        //TODO fix this so it works again.
+        //document.getElementsByClassName('over3')[0].style.fontWeight='bold';
+        //document.getElementsByClassName('under3')[0].style.fontWeight='normal';
 }
+
+/*
+   Function that disables the Over3 layer and enables the Under3 layer.
+   This also changes the text in the legend, but not the radial box (as this should only be called from there). 
+ */
 function putUnder3(){
-  this.under3Layer.addTo(map);
-  map.removeLayer(over3Layer);
-  document.getElementsByClassName('under3')[0].style.fontWeight='bold';
-  document.getElementsByClassName('over3')[0].style.fontWeight='normal';
+        this.under3Layer.addTo(map);
+        map.removeLayer(over3Layer);
+        //TODO fix this so it works again.
+        //document.getElementsByClassName('under3')[0].style.fontWeight='bold';
+        //document.getElementsByClassName('over3')[0].style.fontWeight='normal';
+}
+
+/*
+   Main code, called after the page has loaded (see index.html).
+ */
+function init() {
+        //create the map using LeafletJS
+        map = new L.Map('map');
+
+        L.tileLayer('http://tiles.codefor.de/static/bbs/germany/{z}/{x}/{y}.png', {
+                        attribution: '<a target="_blank" href="http://ulmapi.de">UlmApi.de</a>, Stadt Ulm, Map data &copy; 2014 <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors, Tiles: <a href="http://codefor.de">CfG-Map Server</a>.',
+                        maxZoom: 18
+                        }).addTo(map);
+        //focus on Ulm, configure the appropriate zoom level
+        var ulm = new L.LatLng(48.40, 9.98);
+        map.setView(ulm, 13);
+
+        //This creates a pointToLayer function for the LeafletJS layer, which is used to
+        // configure a LeafletJS Marker with the appropriate icon.
+        //The popups are bound using the onEachFeature fuction.
+        //The display argument should be a valid parameter of the GeoJSON feature that represents a KITA.
+        //In our map, this is essentially just 'over3' or 'under3', although it would
+        // be possible to filter by other parameters in theory. The returned function will
+        // check whether the property exists, and return a LeafletJS marker with the appropriate icon
+        // for the corresponding value (no data, true or false). 
+         createPointToLayer = function(display){
+                return function(feature, latlng){
+                        current = -1;
+                        if(feature.properties[display] == null){
+                                current = 0;
+                        }else if(feature.properties[display] == true){
+                                current = 1;
+                        }else if(feature.properties[display] == false){
+                                current = 2;
+                        }else {
+                                console.warn("Warning, property " + display+ " has an unexpected value for the following feature: " + feature);
+                        }
+                        icon = iconInstance(current);
+                        return L.marker(latlng, {icon: icon});
+                }
+        }
+
+        //This function creates the appropriate popup for each KITA based on the GeoJSON feature properties.
+        //The used properties are currently:
+        // name   - the name of the KITA
+        // id     - the ID of the KITA (used to redirect to forms and the page at ulm.de)
+        //We could also add other data we already parse (email, phone number), but we haven't done this yet, as it may lead to spam and such.
+        oef = function(feature, layer) {
+                var popupContent = "Kindertageseinrichtung<br><b>" + feature.properties.name + "</b><br> <br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id=" + feature.properties.id + "'>Weitere Informationen</a> <br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1=" + feature.properties.id + "'>Kontaktformular</a>";
+                layer.bindPopup(popupContent);
+        };
+
+
+        //retrieve the data as geojson
+        $.getJSON("kitas.geojson", function(json) {
+                console.log(json);
+                data=eval(json);
+                //create two layers with the appropriate filters (which in turn select the correct icons) and add the data to them.
+                over3Layer  = L.geoJson(data.features, { onEachFeature: oef, pointToLayer: createPointToLayer('over3' )});
+                over3Layer.addData(data);
+                under3Layer = L.geoJson(data, { onEachFeature: oef, pointToLayer: createPointToLayer('under3')});
+                under3Layer.addData(data);
+                //also, the default config is over3; add it to the map.
+                putOver3();
+        });
 }
