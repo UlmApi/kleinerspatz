@@ -1,0 +1,1467 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98530094,
+                    48.39576557
+                ],
+                "type": "Point"
+            },
+            "id": "23",
+            "properties": {
+                "address": "Adolph-Kolping-Platz 7",
+                "mail": "stantonius@kita.ulm.de",
+                "over3": true,
+                "telefon": "0731/64900"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98704813,
+                    48.4092852
+                ],
+                "type": "Point"
+            },
+            "id": "49",
+            "properties": {
+                "address": "Alpenstra\u00dfe 40",
+                "mail": "alpenstrasse@ulm.de",
+                "over3": false,
+                "telefon": "0731-1517863"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.90105043,
+                    48.35456681
+                ],
+                "type": "Point"
+            },
+            "id": "102",
+            "properties": {
+                "address": "Am B\u00fcrgele 10",
+                "mail": "am-buergele10@ulm.de",
+                "over3": false,
+                "telefon": "07305/9338526 bzw. 07305/9338527",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.89897356,
+                    48.35462804
+                ],
+                "type": "Point"
+            },
+            "id": "24",
+            "properties": {
+                "address": "Am B\u00fcrgele 5",
+                "mail": "StJosef@kita.ulm.de",
+                "over3": false,
+                "telefon": "07305/5580",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.93780975,
+                    48.40178344
+                ],
+                "type": "Point"
+            },
+            "id": "25",
+            "properties": {
+                "address": "Am Roten Berg 34",
+                "mail": "mariengarten@kita.ulm.de",
+                "over3": false,
+                "telefon": "382322"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98691712,
+                    48.44645464
+                ],
+                "type": "Point"
+            },
+            "id": "101",
+            "properties": {
+                "address": "Am Schulhaus 3 ",
+                "mail": "am-schulhaus3@ulm.de",
+                "over3": false,
+                "telefon": "0731-88016360",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96697201,
+                    48.35139617
+                ],
+                "type": "Point"
+            },
+            "id": "103",
+            "properties": {
+                "address": "Biberacher Stra\u00dfe 136 - Wiblinger Kinderladen",
+                "mail": "h.kletting@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731-37841470",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.02365607,
+                    48.43090823
+                ],
+                "type": "Point"
+            },
+            "id": "26",
+            "properties": {
+                "address": "Brandenburgweg 69",
+                "mail": "stchristophorus@kita.ulm.de",
+                "over3": false,
+                "telefon": "263508",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.07451022,
+                    48.38684565
+                ],
+                "type": "Point"
+            },
+            "id": "27",
+            "properties": {
+                "address": "Brombeerweg 4",
+                "mail": "StJohannes@kita.ulm.de",
+                "over3": true,
+                "telefon": "551577"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97988785,
+                    48.35791476
+                ],
+                "type": "Point"
+            },
+            "id": "51",
+            "properties": {
+                "address": "Burgauer Weg 50",
+                "mail": "Burgauerweg@ulm.de",
+                "over3": true,
+                "telefon": "481301",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96172443,
+                    48.41446398
+                ],
+                "type": "Point"
+            },
+            "id": "92",
+            "properties": {
+                "address": "Carl-Schurz-Str. 5/1",
+                "mail": "knopfschachtel@kita.ulm.de",
+                "over3": false,
+                "telefon": "552611"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.93819578,
+                    48.41468535
+                ],
+                "type": "Point"
+            },
+            "id": "88",
+            "properties": {
+                "address": "Cartesiusstra\u00dfe 6",
+                "mail": "eselsberg@montessori-ulm.de",
+                "over3": false,
+                "telefon": "176380",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.87741216,
+                    48.36251974
+                ],
+                "type": "Point"
+            },
+            "id": "28",
+            "properties": {
+                "address": "Deutschherrenstra\u00dfe 7",
+                "mail": "StAnna@kita.ulm.de",
+                "over3": false,
+                "telefon": "07305/4426",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96629725,
+                    48.33141899
+                ],
+                "type": "Point"
+            },
+            "id": "36",
+            "properties": {
+                "address": "Dorfplatz 1",
+                "mail": "stanton@kita.ulm.de",
+                "over3": true,
+                "telefon": "07346 /2511",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98045051,
+                    48.35840459
+                ],
+                "type": "Point"
+            },
+            "id": "29",
+            "properties": {
+                "address": "Dreifaltigkeitsweg 21",
+                "mail": "Dreifaltigkeitsweg@kita.ulm.de",
+                "over3": false,
+                "telefon": "42996"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.00632085,
+                    48.40777816
+                ],
+                "type": "Point"
+            },
+            "id": "53",
+            "properties": {
+                "address": "Eberhardtstra\u00dfe 23",
+                "mail": "eberhardtstrasse@ulm.de",
+                "over3": false,
+                "telefon": "25947",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.00092229,
+                    48.42037963
+                ],
+                "type": "Point"
+            },
+            "id": "30",
+            "properties": {
+                "address": "Eichenhang 203",
+                "mail": "Eichenhang@kita.ulm.de",
+                "over3": true,
+                "telefon": "0731 / 267633"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97401776,
+                    48.39538508
+                ],
+                "type": "Point"
+            },
+            "id": "31",
+            "properties": {
+                "address": "Elisabethenstra\u00dfe 37/1",
+                "mail": "StElisabeth@kita.ulm.de",
+                "over3": false,
+                "telefon": "360136"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.99676572,
+                    48.40611673
+                ],
+                "type": "Point"
+            },
+            "id": "104",
+            "properties": {
+                "address": "Friedenstra\u00dfe 39 ",
+                "mail": "friedenstrasse39@ulm.de",
+                "over3": true,
+                "telefon": "0731 / 88016345",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.99769894,
+                    48.40618058
+                ],
+                "type": "Point"
+            },
+            "id": "32",
+            "properties": {
+                "address": "Friedenstra\u00dfe 40",
+                "mail": "anne-frank-heim@kita.ulm.de",
+                "over3": false,
+                "telefon": "21660",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.01272979,
+                    48.40742512
+                ],
+                "type": "Point"
+            },
+            "id": "81",
+            "properties": {
+                "address": "Friedrichsau 1 ",
+                "mail": "info@kindergarten-ulm.de",
+                "over3": false,
+                "telefon": "22444"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.01465026,
+                    48.40822656
+                ],
+                "type": "Point"
+            },
+            "id": "85",
+            "properties": {
+                "address": "Gemeinschaftskindergarten e. V. ",
+                "mail": "info@kiga-ulm.de",
+                "over3": false,
+                "telefon": "0731/28944"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98917045,
+                    48.4448525
+                ],
+                "type": "Point"
+            },
+            "id": "19",
+            "properties": {
+                "address": "Fr\u00f6belstra\u00dfe 2/1",
+                "mail": "untererbruehl@kita.ulm.de",
+                "over3": false,
+                "telefon": "618740"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98820785,
+                    48.44540036
+                ],
+                "type": "Point"
+            },
+            "id": "6",
+            "properties": {
+                "address": "Fr\u00f6belstra\u00dfe 5",
+                "mail": "Froebelstrasse@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731/66932",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94333538,
+                    48.39750249
+                ],
+                "type": "Point"
+            },
+            "id": "84",
+            "properties": {
+                "address": "Harthauser Stra\u00dfe 103",
+                "mail": "sportkindergarten@kita.ulm.de",
+                "over3": true,
+                "telefon": "386888",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95121226,
+                    48.39553105
+                ],
+                "type": "Point"
+            },
+            "id": "33",
+            "properties": {
+                "address": "Harthauser Stra\u00dfe 36",
+                "mail": "HausSonnenheim@kita.ulm.de",
+                "over3": false,
+                "telefon": "381792",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.01828653,
+                    48.42864469
+                ],
+                "type": "Point"
+            },
+            "id": "34",
+            "properties": {
+                "address": "Haslacher Weg 32",
+                "mail": "DonBosco@kita.ulm.de",
+                "over3": true,
+                "telefon": "263515",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.02136892,
+                    48.43073972
+                ],
+                "type": "Point"
+            },
+            "id": "7",
+            "properties": {
+                "address": "Haslacher Weg 72",
+                "mail": "HaslacherWeg@kita.ulm.de",
+                "over3": false,
+                "telefon": "265523",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.9445571,
+                    48.41387785
+                ],
+                "type": "Point"
+            },
+            "id": "56",
+            "properties": {
+                "address": "Heilmeyersteige 154",
+                "mail": "heilmeyersteige@ulm.de",
+                "over3": true,
+                "telefon": "51083",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95803931,
+                    48.41030397
+                ],
+                "type": "Point"
+            },
+            "id": "15",
+            "properties": {
+                "address": "Hermann-Stehr-Weg 3",
+                "mail": "Hermann-Stehr-Weg@kita.ulm.de",
+                "over3": true,
+                "telefon": "0731-52590",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95188896,
+                    48.39633483
+                ],
+                "type": "Point"
+            },
+            "id": "35",
+            "properties": {
+                "address": "Hinter der Mauer 12",
+                "mail": "StMaria@kita.ulm.de",
+                "over3": true,
+                "telefon": "381902",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97458709,
+                    48.40680149
+                ],
+                "type": "Point"
+            },
+            "id": "8",
+            "properties": {
+                "address": "Hubenb\u00fchl 5 ",
+                "mail": "hubenbuehl@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731 54180",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94294763,
+                    48.41377415
+                ],
+                "type": "Point"
+            },
+            "id": "57",
+            "properties": {
+                "address": "Johann-Stockar-Weg 45",
+                "mail": "johann-stockar-weg@ulm.de",
+                "over3": false,
+                "telefon": "51093"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94901939,
+                    48.3901713
+                ],
+                "type": "Point"
+            },
+            "id": "9",
+            "properties": {
+                "address": "J\u00f6rg-Syrlin-Stra\u00dfe 99-101",
+                "mail": "joerg-syrlin-strasse@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731 3799237",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98384276,
+                    48.36007531
+                ],
+                "type": "Point"
+            },
+            "id": "10",
+            "properties": {
+                "address": "Kapellenstra\u00dfe 5",
+                "mail": "kapellenstrasse@kita.ulm.de",
+                "over3": false,
+                "telefon": "47447"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97084933,
+                    48.42046661
+                ],
+                "type": "Point"
+            },
+            "id": "87",
+            "properties": {
+                "address": "Lehrer Tal 1",
+                "mail": "eltern-initiative@kita.ulm.de",
+                "over3": true,
+                "telefon": "60493",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97750457,
+                    48.35113622
+                ],
+                "type": "Point"
+            },
+            "id": "37",
+            "properties": {
+                "address": "Lindauer Stra\u00dfe 118",
+                "mail": "ArcheNoah@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731/43565",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97809538,
+                    48.3509873
+                ],
+                "type": "Point"
+            },
+            "id": "58",
+            "properties": {
+                "address": "Lindauer Stra\u00dfe 1",
+                "mail": "lindauerstrasse1@ulm.de",
+                "over3": false,
+                "telefon": "0731/44193",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97713252,
+                    48.35143615
+                ],
+                "type": "Point"
+            },
+            "id": "59",
+            "properties": {
+                "address": "Lindauer Stra\u00dfe 112",
+                "mail": "lindauerstrasse112@ulm.de",
+                "over3": false,
+                "telefon": "0731/481188",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96432116,
+                    48.41462209
+                ],
+                "type": "Point"
+            },
+            "id": "60",
+            "properties": {
+                "address": "M\u00e4hringer Weg 128/1",
+                "mail": "maehringerweg@ulm.de",
+                "over3": true,
+                "telefon": "5094676",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94487239,
+                    48.390808
+                ],
+                "type": "Point"
+            },
+            "id": "61",
+            "properties": {
+                "address": "Maienweg 148",
+                "mail": "maienweg@ulm.de",
+                "over3": false,
+                "telefon": "383386",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94121361,
+                    48.37180857
+                ],
+                "type": "Point"
+            },
+            "id": "55",
+            "properties": {
+                "address": "Martin-Zeiller-Weg 40",
+                "mail": "Martin-Zeiller-Weg@ulm.de",
+                "over3": false,
+                "telefon": "3886200"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96599854,
+                    48.39264689
+                ],
+                "type": "Point"
+            },
+            "id": "91",
+            "properties": {
+                "address": "Moltkestra\u00dfe 14",
+                "mail": "wuselvilla@awo-ulm.de",
+                "over3": true,
+                "telefon": "9316360",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96238382,
+                    48.38642699
+                ],
+                "type": "Point"
+            },
+            "id": "38",
+            "properties": {
+                "address": "Neunkirchenweg 65",
+                "mail": "HeiligGeist@kita.ulm.de",
+                "over3": false,
+                "telefon": "382451",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96169846,
+                    48.38731405
+                ],
+                "type": "Point"
+            },
+            "id": "62",
+            "properties": {
+                "address": "Neunkirchenweg 70",
+                "mail": "neunkirchenweg@ulm.de",
+                "over3": true,
+                "telefon": "0731/161-5142"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94831053,
+                    48.41449446
+                ],
+                "type": "Point"
+            },
+            "id": "63",
+            "properties": {
+                "address": "Ochsensteige 6",
+                "mail": "ochsensteige@ulm.de",
+                "over3": false,
+                "telefon": "552725"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95873654,
+                    48.3956664
+                ],
+                "type": "Point"
+            },
+            "id": "90",
+            "properties": {
+                "address": "Pfarrer-Wei\u00df-Weg 15",
+                "mail": "rappelkiste@awo-ulm.de",
+                "over3": false,
+                "telefon": "3886137",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.99645117,
+                    48.40799002
+                ],
+                "type": "Point"
+            },
+            "id": "39",
+            "properties": {
+                "address": "Prittwitzstr. 13 - 17",
+                "mail": "kita@guterhirte-ulm.de",
+                "over3": false,
+                "telefon": "9227045  Ganztagesgruppe / 9227042 Krippe",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97257914,
+                    48.35109706
+                ],
+                "type": "Point"
+            },
+            "id": "40",
+            "properties": {
+                "address": "Ravensburger Str.18",
+                "mail": "Franziskus@kita.ulm.de",
+                "over3": true,
+                "telefon": "42616"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.99826704,
+                    48.41311832
+                ],
+                "type": "Point"
+            },
+            "id": "12",
+            "properties": {
+                "address": "Rechbergweg 23",
+                "mail": "Pezzettino@kita.ulm.de ",
+                "over3": true,
+                "telefon": "0731/24278"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96525843,
+                    48.43200681
+                ],
+                "type": "Point"
+            },
+            "id": "13",
+            "properties": {
+                "address": "Reschweg 1",
+                "mail": "sonnenschein@kita.ulm.de",
+                "over3": true,
+                "telefon": "60540",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97182828,
+                    48.35488953
+                ],
+                "type": "Point"
+            },
+            "id": "64",
+            "properties": {
+                "address": "Reutlinger Stra\u00dfe 28",
+                "mail": "reutlingerstrasse@ulm.de",
+                "over3": false,
+                "telefon": "0731/42417"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.93666084,
+                    48.33333705
+                ],
+                "type": "Point"
+            },
+            "id": "65",
+            "properties": {
+                "address": "Riedlenstra\u00dfe 12/1",
+                "mail": "riedlenstrasse@ulm.de",
+                "over3": false,
+                "telefon": "07305/24637",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97040414,
+                    48.43326749
+                ],
+                "type": "Point"
+            },
+            "id": "14",
+            "properties": {
+                "address": "Riemenschneiderweg 12",
+                "mail": "M.Mayer@kita.ulm.de",
+                "over3": true,
+                "telefon": "65694"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95766689,
+                    48.41061284
+                ],
+                "type": "Point"
+            },
+            "id": "41",
+            "properties": {
+                "address": "Rieslingweg 10",
+                "mail": "StFranziskus@kita.ulm.de",
+                "over3": true,
+                "telefon": "0731/52223"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97094949,
+                    48.38672369
+                ],
+                "type": "Point"
+            },
+            "id": "83",
+            "properties": {
+                "address": "R\u00f6merstra\u00dfe 97",
+                "mail": "a.airikkala@kita.ulm.de",
+                "over3": false,
+                "telefon": "9325820",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95474549,
+                    48.40825397
+                ],
+                "type": "Point"
+            },
+            "id": "97",
+            "properties": {
+                "address": "Rul\u00e4nderweg 1",
+                "mail": "rulaenderweg1@ulm.de",
+                "over3": false,
+                "telefon": "0731-20640868 oder 0731-20640869",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.95496439,
+                    48.40984393
+                ],
+                "type": "Point"
+            },
+            "id": "66",
+            "properties": {
+                "address": "Rul\u00e4nderweg 4",
+                "mail": "Rulaenderweg@ulm.de",
+                "over3": false,
+                "telefon": "551488",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96441469,
+                    48.390295
+                ],
+                "type": "Point"
+            },
+            "id": "42",
+            "properties": {
+                "address": "Saarlandsta\u00dfe 96",
+                "mail": "hausnazareth@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731 - 3890735"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.99391417,
+                    48.40326363
+                ],
+                "type": "Point"
+            },
+            "id": "67",
+            "properties": {
+                "address": "Schaffnerstra\u00dfe 18/2",
+                "mail": "schaffnerstrasse@ulm.de",
+                "over3": true,
+                "telefon": "0731 / 68959",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98556371,
+                    48.39119482
+                ],
+                "type": "Point"
+            },
+            "id": "82",
+            "properties": {
+                "address": "Schillerstra\u00dfe 1/11",
+                "mail": "info@ulmer-kinderladen.de / a.arlt-badouin@kita.ulm.de",
+                "telefon": "619912",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98516608,
+                    48.39297886
+                ],
+                "type": "Point"
+            },
+            "id": "68",
+            "properties": {
+                "address": "Schillerstra\u00dfe 2/7",
+                "mail": "schillerstrasse@ulm.de",
+                "over3": true,
+                "telefon": "61233"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97617288,
+                    48.39509701
+                ],
+                "type": "Point"
+            },
+            "id": "16",
+            "properties": {
+                "address": "Schillstra\u00dfe 40",
+                "mail": "schillstrasse@kita.ulm.de",
+                "over3": false,
+                "telefon": "33171"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97614563,
+                    48.39578971
+                ],
+                "type": "Point"
+            },
+            "id": "80",
+            "properties": {
+                "address": "Schillstra\u00dfe 44",
+                "mail": "U.Neidlinger@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731/30017",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.94327991,
+                    48.43755804
+                ],
+                "type": "Point"
+            },
+            "id": "17",
+            "properties": {
+                "address": "Schulweg 16",
+                "mail": "schulweg@kita.ulm.de",
+                "over3": true,
+                "telefon": "51739",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.00014923,
+                    48.40164476
+                ],
+                "type": "Point"
+            },
+            "id": "44",
+            "properties": {
+                "address": "Seelengraben 55",
+                "mail": "StWolfgang@kita.ulm.de",
+                "over3": false,
+                "telefon": "21303",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96509272,
+                    48.40614414
+                ],
+                "type": "Point"
+            },
+            "id": "45",
+            "properties": {
+                "address": "Sonnenhalde 22",
+                "mail": "Sonnenhalde@kita.ulm.de",
+                "over3": true,
+                "telefon": "54457"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97656673,
+                    48.38604659
+                ],
+                "type": "Point"
+            },
+            "id": "89",
+            "properties": {
+                "address": "St. Barbara-Stra\u00dfe 35 (Montessori)",
+                "mail": "strolche@montessori-ulm.de",
+                "over3": false,
+                "telefon": "31127"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97656673,
+                    48.38604659
+                ],
+                "type": "Point"
+            },
+            "id": "69",
+            "properties": {
+                "address": "St. Barbara-Stra\u00dfe 35 (Stadt Ulm) ",
+                "mail": "st-barbara-strasse@ulm.de",
+                "over3": false,
+                "telefon": "0731 161 51 44 "
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.93478832,
+                    48.33051045
+                ],
+                "type": "Point"
+            },
+            "id": "52",
+            "properties": {
+                "address": "St.-Florian-Weg 10",
+                "mail": "st-florian-weg@ulm.de",
+                "over3": false,
+                "telefon": "073055464",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.00332448,
+                    48.40377544
+                ],
+                "type": "Point"
+            },
+            "id": "18",
+            "properties": {
+                "address": "Staufenring 40",
+                "mail": "Staufenring@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731/21123",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.96646568,
+                    48.43366937
+                ],
+                "type": "Point"
+            },
+            "id": "98",
+            "properties": {
+                "address": "St\u00f6cklenstra\u00dfe 7/1",
+                "mail": "stoecklenstrasse7@ulm.de",
+                "over3": false,
+                "telefon": "0731-88016415",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.02999586,
+                    48.43501541
+                ],
+                "type": "Point"
+            },
+            "id": "70",
+            "properties": {
+                "address": "Sudetenweg 20",
+                "mail": "sudetenweg@ulm.de",
+                "over3": true,
+                "telefon": "0731 / 9267028"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97852172,
+                    48.35774654
+                ],
+                "type": "Point"
+            },
+            "id": "71",
+            "properties": {
+                "address": "Tannen\u00e4cker 164",
+                "mail": "Tannenaecker@ulm.de",
+                "over3": false,
+                "telefon": "43110",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.9510526,
+                    48.41158503
+                ],
+                "type": "Point"
+            },
+            "id": "46",
+            "properties": {
+                "address": "Traminerweg 86",
+                "mail": "StBarbara@kita.ulm.de",
+                "over3": false,
+                "telefon": "56766",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.89505781,
+                    48.38217755
+                ],
+                "type": "Point"
+            },
+            "id": "54",
+            "properties": {
+                "address": "Turritellenstra\u00dfe 19",
+                "mail": "turritellenstrasse@ulm.de",
+                "over3": true,
+                "telefon": "07304/2530",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.98874632,
+                    48.39934223
+                ],
+                "type": "Point"
+            },
+            "id": "100",
+            "properties": {
+                "address": "Ulmergasse 15 / Wengengasse 10",
+                "mail": "ulmergasse15@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731 / 88016450",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97016647,
+                    48.38388847
+                ],
+                "type": "Point"
+            },
+            "id": "86",
+            "properties": {
+                "address": "Unterer Kuhberg 22",
+                "mail": "waldorfkindergarten@illerblick.de",
+                "over3": false,
+                "telefon": "0731 9359700",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.92256636,
+                    48.39979339
+                ],
+                "type": "Point"
+            },
+            "id": "94",
+            "properties": {
+                "address": "Waldkindergarten",
+                "mail": "info@waldkindergarten-ulm.de",
+                "over3": true,
+                "telefon": "01575 0160 165"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97342475,
+                    48.34874268
+                ],
+                "type": "Point"
+            },
+            "id": "20",
+            "properties": {
+                "address": "Wangener Stra\u00dfe 58",
+                "mail": "Zachaeus@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731/46219",
+                "under3": false
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.97285701,
+                    48.38904577
+                ],
+                "type": "Point"
+            },
+            "id": "21",
+            "properties": {
+                "address": "Weickmannstra\u00dfe 33",
+                "mail": "Weickmannstrasse@kita.ulm.de",
+                "over3": false,
+                "telefon": "0731 / 32638"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    10.01048424,
+                    48.40725602
+                ],
+                "type": "Point"
+            },
+            "id": "72",
+            "properties": {
+                "address": "Wielandstra\u00dfe 74",
+                "mail": "Wielandstrasse@ulm.de",
+                "over3": false,
+                "telefon": "27820",
+                "under3": true
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    9.99191155,
+                    48.40376655
+                ],
+                "type": "Point"
+            },
+            "id": "48",
+            "properties": {
+                "address": "Zeitblomstra\u00dfe 41",
+                "mail": "st.maria@kinderhaus-ulm.de",
+                "over3": false,
+                "telefon": "9670526"
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}

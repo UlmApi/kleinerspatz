@@ -82,9 +82,9 @@ function init() {
                         current = -1;
                         if(feature.properties[display] == null){
                                 current = 0;
-                        }else if(feature.properties[display] == "true"){
+                        }else if(feature.properties[display] == true){
                                 current = 1;
-                        }else if(feature.properties[display] == "false"){
+                        }else if(feature.properties[display] == false){
                                 current = 2;
                         }else {
                                 console.warn("Warning, property " + display+ " has an unexpected value for the following feature: " + feature);

@@ -55,10 +55,10 @@ def main():
             elif color == 'rot':
                 over3_allowed = False
 
-        under3_cell = cells[5].parent.parent.find(u'Freie Plätze unter 3 Jahre:')
+        under3_cell = cells[5].parent.parent.find(text=re.compile(u'Freie Plätze unter 3 Jahre:'))
         under3_allowed = None
         if under3_cell:
-            color = under3_allowed.next.next.img.get('title')
+            color = under3_cell.next.next.img.get('title')
             if color == u'grün':
                 under3_allowed = True
             elif color == 'rot':
@@ -68,12 +68,12 @@ def main():
 
         properties = {'address': cells[1].text,
                       'telefon': cells[2].text[9:],
-                      'mail': cells[2].text[8:]
+                      'mail': cells[3].text[8:]
                       }
         if over3_allowed is not None:
-            properties['over3_allowed'] = over3_allowed
+            properties['over3'] = over3_allowed
         if under3_allowed is not None:
-            properties['under3_allowed'] = under3_allowed
+            properties['under3'] = under3_allowed
 
         # Scrape the coordinates of the Kita.
         # Try a few times because the server is prone to crapping out.
@@ -89,7 +89,7 @@ def main():
             # No coordinates, no geojson!
             continue
 
-        wgs_coords = gkz_to_wgs(coords.group(0), coords.group(1))
+        wgs_coords = gkz_to_wgs(coords.group(1), coords.group(2))
 
         feature = geojson.Feature(geometry=geojson.Point(wgs_coords),
                                   properties=properties, id=id)
