@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# coding: utf-8
+
 __author__ = 'Daniel'
 
 import re
@@ -44,7 +47,7 @@ def main():
         
         # Check if there is space for over/under three year olds.
 
-        over3_cell = cells[0].parent.find('Freie Plätze über 3 Jahre:')
+        over3_cell = cells[0].parent.find(u'Freie Plätze über 3 Jahre:')
         over3_allowed = None
         if over3_cell:
             color = over3_cell.next.next.img.get('title')
@@ -53,7 +56,7 @@ def main():
             elif color == 'rot':
                 over3_allowed = False
 
-        under3_cell = cells[0].parent.find('Freie Plätze unter 3 Jahre:')
+        under3_cell = cells[0].parent.find(u'Freie Plätze unter 3 Jahre:')
         under3_allowed = None
         if over3_cell:
             color = under3_allowed.next.next.img.get('title')
