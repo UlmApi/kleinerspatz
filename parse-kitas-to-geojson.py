@@ -71,7 +71,7 @@ def main():
         if over3_allowed is not None:
             properties['over3_allowed'] = over3_allowed
         if under3_allowed is not None:
-            properties['over3_allowed'] = under3_allowed
+            properties['under3_allowed'] = under3_allowed
 
         # Scrape the coordinates of the Kita.
         # Try a few times because the server is prone to crapping out.
