@@ -46,21 +46,20 @@ def main():
     for cells in kita_cells:
         
         # Check if there is space for over/under three year olds.
-
-        over3_cell = cells[0].parent.find(u'Freie Plätze über 3 Jahre:')
+        over3_cell = cells[5].parent.parent.find(text=re.compile(u'Freie Plätze über 3 Jahre:'))
         over3_allowed = None
         if over3_cell:
             color = over3_cell.next.next.img.get('title')
-            if color == 'grün':
+            if color == u'grün':
                 over3_allowed = True
             elif color == 'rot':
                 over3_allowed = False
 
-        under3_cell = cells[0].parent.find(u'Freie Plätze unter 3 Jahre:')
+        under3_cell = cells[5].parent.parent.find(u'Freie Plätze unter 3 Jahre:')
         under3_allowed = None
-        if over3_cell:
+        if under3_cell:
             color = under3_allowed.next.next.img.get('title')
-            if color == 'grün':
+            if color == u'grün':
                 under3_allowed = True
             elif color == 'rot':
                 under3_allowed = False
