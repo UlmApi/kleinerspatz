@@ -86,6 +86,7 @@ def main():
 
         coords = COORDS_REGEX.search(req.text)
         if not coords:
+            print ("No coordinates found for this KITA: " + str( properties ))
             # No coordinates, no geojson!
             continue
 
