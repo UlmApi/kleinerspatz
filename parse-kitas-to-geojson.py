@@ -17,6 +17,10 @@ COORDS_REGEX = re.compile(r'mapX=(\d+)&mapY=(\d+)')
 
 import subprocess
 
+#regular expressions
+free_over3  = re.compile(u'Freie Plätze über 3 Jahre:')
+free_below3 = re.compile(u'Freie Plätze unter 3 Jahre:')
+
 
 # TODO Rens, test it
 def gkz_to_wgs(gk_x, gk_y):
@@ -46,7 +50,7 @@ def main():
     for cells in kita_cells:
         
         # Check if there is space for over/under three year olds.
-        over3_cell = cells[5].parent.parent.find(text=re.compile(u'Freie Plätze über 3 Jahre:'))
+        over3_cell = cells[5].parent.parent.find(text=free_over3)
         over3_allowed = None
         if over3_cell:
             color = over3_cell.next.next.img.get('title')
@@ -55,7 +59,7 @@ def main():
             elif color == 'rot':
                 over3_allowed = False
 
-        under3_cell = cells[5].parent.parent.find(text=re.compile(u'Freie Plätze unter 3 Jahre:'))
+        under3_cell = cells[5].parent.parent.find(text=free_below3)
         under3_allowed = None
         if under3_cell:
             color = under3_cell.next.next.img.get('title')
