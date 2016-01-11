@@ -27,8 +27,8 @@ def gkz_to_wgs(gk_x, gk_y):
     p = subprocess.Popen('cs2cs -f %.8f" +init=epsg:31467 +to +init=epsg:4326'.split(' '),
                          stdout=subprocess.PIPE, stdin=subprocess.PIPE)
     out, err = p.communicate("%s %s" % (gk_x, gk_y))
-    wgs_x, wgs_y = out.split('"')
-    return float(wgs_x), float(wgs_y)
+    outputs = out.split('"')
+    return float(outputs[0]), float(outputs[1])
 
 
 # This one goes out to the Kita server which likes to sometimes throw 500 errors randomly.
@@ -54,7 +54,7 @@ def main():
 
     for cells in kita_cells:
         # Check if there is space for over/under three year olds.
-        over3_cell = cells[5].parent.parent.find(text=free_over3_regex)
+        over3_cell = cells[4].parent.parent.find(text=free_over3_regex)
         over3_allowed = None
         if over3_cell:
             color = over3_cell.next.next.img.get('title')
@@ -63,7 +63,7 @@ def main():
             elif color == 'rot':
                 over3_allowed = False
 
-        under3_cell = cells[5].parent.parent.find(text=free_below3_regex)
+        under3_cell = cells[4].parent.parent.find(text=free_below3_regex)
         under3_allowed = None
         if under3_cell:
             color = under3_cell.next.next.img.get('title')
