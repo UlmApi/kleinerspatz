@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # coding: utf-8
-
 __author__ = 'Daniel'
 
 import re
@@ -25,7 +24,7 @@ coords_regex      = re.compile(r'mapX=(\d+)&mapY=(\d+)')
 def gkz_to_wgs(gk_x, gk_y):
     """Convert Gauss-Krueger coordinates to WGS coordinates."""
     p = subprocess.Popen('cs2cs -f %.8f" +init=epsg:31467 +to +init=epsg:4326'.split(' '),
-                         stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+                         stdout=subprocess.PIPE, stdin=subprocess.PIPE, universal_newlines=True)
     out, err = p.communicate("%s %s" % (gk_x, gk_y))
     outputs = out.split('"')
     return float(outputs[0]), float(outputs[1])
