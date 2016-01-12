@@ -95,11 +95,11 @@ function init() {
 
         //This function creates the appropriate popup for each KITA based on the GeoJSON feature properties.
         //The used properties are currently:
-        // name   - the name of the KITA
+        // address- the name (usually address) of the KITA
         // id     - the ID of the KITA (used to redirect to forms and the page at ulm.de)
         //We could also add other data we already parse (email, phone number), but we haven't done this yet, as it may lead to spam and such.
         oef = function(feature, layer) {
-                var popupContent = "Kindertageseinrichtung<br><b>" + feature.properties.name + "</b><br> <br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id=" + feature.properties.id + "'>Weitere Informationen</a> <br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1=" + feature.properties.id + "'>Kontaktformular</a>";
+                var popupContent = "Kindertageseinrichtung<br><b>" + feature.properties.address + "</b><br> <br><a target='_blank' href='http://suche.kita.ulm.de/homepage/einrichtung.php?id=" + feature.id + "'>Weitere Informationen</a> <br><a target='_blank' href='http://suche.kita.ulm.de/homepage/kontakt.php?Wunscheinrichtung1=" + feature.id + "'>Kontaktformular</a>";
                 layer.bindPopup(popupContent);
         };
 

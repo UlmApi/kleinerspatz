@@ -11,7 +11,7 @@ The front-end uses:
 
 Requirements (Parser)
 ------------
-This version of the parser produces GeoJSON; the parser is written in python and runs with python 2.7.x (tested with Python 2.7.6). It requires the python library geojson, which you can install using `pip install geojson`; it was tested with version 1.0.9. In addition, the parser uses proj (more precisely, `cs2cs`) to translate coordinate systems. On Debian, that means you'll need the `proj-bin` package.
+This version of the parser produces GeoJSON; the parser is written in python and works in both Python 2.7.x and Python 3 (tested with 2.7.6 and 3.4.2). It requires the python library geojson, which you can install using `pip install geojson`; it was tested with version 1.0.9. In addition, the parser uses proj (more precisely, `cs2cs`) to translate coordinate systems. On Debian, that means you'll need the `proj-bin` package. You may also need the `proj-epsg.x86_64` package.
 
 Scraping
 -------
